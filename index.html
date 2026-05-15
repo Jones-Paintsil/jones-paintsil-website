@@ -19,7 +19,7 @@
     <meta name="twitter:title" content="Jones Paintsil - Development Economist">
     <meta name="twitter:description" content="PhD candidate in Economics at Howard University. Consultant at the World Bank Group.">
 
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%236366f1' rx='12' width='100' height='100'/><text x='50' y='68' font-family='Inter,sans-serif' font-size='48' font-weight='bold' fill='white' text-anchor='middle'>JP</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231e3a8a' rx='12' width='100' height='100'/><text x='50' y='68' font-family='Inter,sans-serif' font-size='48' font-weight='bold' fill='white' text-anchor='middle'>JP</text></svg>">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,17 +27,17 @@
 
     <style>
         :root {
-            --primary: #18181b;
-            --accent: #6366f1;
-            --accent-hover: #4f46e5;
-            --accent-light: #818cf8;
-            --accent-bg: #eef2ff;
+            --primary: #1e3a8a;
+            --accent: #3b82f6;
+            --accent-hover: #1e40af;
+            --accent-light: #60a5fa;
+            --accent-bg: #eff6ff;
             --bg: #f4f4f5;
             --card-bg: #ffffff;
-            --text: #18181b;
-            --text-muted: #71717a;
-            --border: #e4e4e7;
-            --nav-bg: #18181b;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --nav-bg: #1e293b;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -82,16 +82,16 @@
 
         /* Dark Mode */
         body.dark-mode {
-            --bg: #09090b;
-            --card-bg: #18181b;
-            --text: #fafafa;
-            --text-muted: #a1a1aa;
-            --border: #27272a;
-            --accent-bg: #1e1b4b;
-            --nav-bg: #09090b;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --accent-bg: #1e3a8a;
+            --nav-bg: #0f172a;
         }
 
-        body.dark-mode footer { background-color: #09090b; border-top: 1px solid #27272a; }
+        body.dark-mode footer { background-color: #0f172a; border-top: 1px solid #1e293b; }
 
         /* Header */
         header {
@@ -115,7 +115,7 @@
             object-position: center 15%;
             flex-shrink: 0;
             border: 3px solid var(--accent);
-            box-shadow: 0 0 0 6px rgba(99,102,241,0.2);
+            box-shadow: 0 0 0 6px rgba(59,130,246,0.2);
             transition: transform 0.3s ease;
         }
 
@@ -319,7 +319,7 @@
             background-color: var(--accent);
             border: 2px solid var(--card-bg);
             border-radius: 50%;
-            box-shadow: 0 0 0 3px rgba(99,102,241,0.2);
+            box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
         }
 
         .timeline-item:hover { border-color: var(--accent); background-color: var(--accent-bg); }
@@ -350,7 +350,7 @@
             padding: 0.2rem 0.7rem;
             border-radius: 999px;
             margin-top: 0.5rem;
-            border: 1px solid rgba(99,102,241,0.3);
+            border: 1px solid rgba(59,130,246,0.3);
         }
 
         .pub-authors { font-size: 0.83rem; color: var(--text-muted); margin-top: 0.4rem; }
@@ -377,7 +377,7 @@
         .blog-card:hover {
             border-color: var(--accent);
             transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(99,102,241,0.1);
+            box-shadow: 0 8px 30px rgba(59,130,246,0.1);
         }
 
         .blog-meta {
@@ -402,7 +402,7 @@
             border-radius: 999px;
             margin-right: 0.3rem;
             margin-bottom: 0.5rem;
-            border: 1px solid rgba(99,102,241,0.3);
+            border: 1px solid rgba(59,130,246,0.3);
         }
 
         .blog-excerpt { color: var(--text-muted); margin: 0.75rem 0 1rem; font-size: 0.92rem; line-height: 1.7; }
@@ -438,7 +438,7 @@
             color: var(--accent);
             text-decoration: none;
             transition: all 0.2s ease;
-            border: 1px solid rgba(99,102,241,0.2);
+            border: 1px solid rgba(59,130,246,0.2);
         }
 
         .social-icon:hover { background-color: var(--accent); color: white; transform: translateY(-3px); }
@@ -471,7 +471,7 @@
             border-radius: 10px;
             cursor: pointer;
             font-size: 1.2rem;
-            box-shadow: 0 4px 15px rgba(99,102,241,0.4);
+            box-shadow: 0 4px 15px rgba(59,130,246,0.4);
             opacity: 0; visibility: hidden;
             transition: all 0.3s ease;
             z-index: 1000;
