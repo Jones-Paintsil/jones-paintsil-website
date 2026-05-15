@@ -5,65 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jones Paintsil - Development Economist</title>
 
-    <!-- SEO Meta Tags -->
     <meta name="description" content="Jones Paintsil is a PhD candidate in Economics at Howard University, with a concentration in Development Economics. Currently a Consultant at the World Bank Group.">
     <meta name="keywords" content="Jones Paintsil, Development Economics, Howard University, World Bank, PhD Economist, Sub-Saharan Africa, Health Economics, Climate Economics">
     <meta name="author" content="Jones Paintsil">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
-    <!-- Open Graph Tags for Social Sharing -->
     <meta property="og:title" content="Jones Paintsil - Development Economist">
     <meta property="og:description" content="PhD candidate in Economics at Howard University. Consultant at the World Bank Group. Research focus on health, climate, and poverty in Sub-Saharan Africa.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="Profile.jpeg">
 
-    <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Jones Paintsil - Development Economist">
     <meta name="twitter:description" content="PhD candidate in Economics at Howard University. Consultant at the World Bank Group.">
 
-    <!-- Favicon with initials JP -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231e3a8a' rx='12' width='100' height='100'/><text x='50' y='68' font-family='Georgia,serif' font-size='48' font-weight='bold' fill='white' text-anchor='middle'>JP</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%236366f1' rx='12' width='100' height='100'/><text x='50' y='68' font-family='Inter,sans-serif' font-size='48' font-weight='bold' fill='white' text-anchor='middle'>JP</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --primary: #18181b;
+            --accent: #6366f1;
+            --accent-hover: #4f46e5;
+            --accent-light: #818cf8;
+            --accent-bg: #eef2ff;
+            --bg: #f4f4f5;
+            --card-bg: #ffffff;
+            --text: #18181b;
+            --text-muted: #71717a;
+            --border: #e4e4e7;
+            --nav-bg: #18181b;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
         body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #1e3a8a 100%);
-            background-size: 200% 200%;
-            animation: gradientShift 8s ease infinite;
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background-color: var(--bg);
         }
 
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* Reading Progress Bar */
+        /* Progress Bar */
         .progress-bar {
             position: fixed;
-            top: 0;
-            left: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+            top: 0; left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
             width: 0%;
             z-index: 1001;
             transition: width 0.1s ease;
@@ -72,528 +65,467 @@
         /* Dark Mode Toggle */
         .theme-toggle {
             position: fixed;
-            top: 80px;
-            right: 20px;
-            width: 45px;
-            height: 45px;
+            top: 80px; right: 20px;
+            width: 42px; height: 42px;
             border-radius: 50%;
-            border: none;
-            background-color: #1e293b;
-            color: white;
+            border: 2px solid var(--border);
+            background-color: var(--card-bg);
+            color: var(--text);
             cursor: pointer;
-            font-size: 1.2rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            font-size: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             z-index: 1000;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            transition: all 0.3s ease;
         }
 
-        .theme-toggle:hover {
-            transform: scale(1.1);
-        }
+        .theme-toggle:hover { transform: scale(1.1); border-color: var(--accent); }
 
-        /* Dark Mode Styles */
+        /* Dark Mode */
         body.dark-mode {
-            background-color: #0f172a;
-            color: #e2e8f0;
+            --bg: #09090b;
+            --card-bg: #18181b;
+            --text: #fafafa;
+            --text-muted: #a1a1aa;
+            --border: #27272a;
+            --accent-bg: #1e1b4b;
+            --nav-bg: #09090b;
         }
 
-        body.dark-mode section {
-            background-color: #1e293b;
-            color: #e2e8f0;
+        body.dark-mode footer { background-color: #09090b; border-top: 1px solid #27272a; }
+
+        /* Header */
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 5rem 2rem 4rem;
         }
 
-        body.dark-mode h2 {
-            color: #60a5fa;
-        }
-
-        body.dark-mode h3 {
-            color: #93c5fd;
-        }
-
-        body.dark-mode .institution {
-            color: #94a3b8;
-        }
-
-        body.dark-mode .education-item:hover,
-        body.dark-mode .research-area:hover {
-            background-color: #334155;
-        }
-
-        body.dark-mode footer {
-            background-color: #020617;
-        }
-
-        body.dark-mode nav {
-            background-color: #020617;
-        }
-
-        body.dark-mode .degree {
-            color: #93c5fd;
-        }
-        
         .header-content {
+            max-width: 900px;
+            margin: 0 auto;
             display: flex;
-            flex-direction: column;
             align-items: center;
-            gap: 1.5rem;
+            gap: 3rem;
         }
-        
+
         .profile-photo {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
+            width: 160px; height: 160px;
+            border-radius: 16px;
             object-fit: cover;
             object-position: center 15%;
-            transform: scale(1.1);
-            border: 5px solid transparent;
-            background: linear-gradient(white, white) padding-box,
-                        linear-gradient(135deg, #60a5fa, #1e3a8a, #3b82f6) border-box;
-            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            flex-shrink: 0;
+            border: 3px solid var(--accent);
+            box-shadow: 0 0 0 6px rgba(99,102,241,0.2);
+            transition: transform 0.3s ease;
         }
 
-        .profile-photo:hover {
-            transform: scale(1.15);
-            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.6);
+        .profile-photo:hover { transform: scale(1.03); }
+
+        .header-text h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
         }
-        
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+
+        .header-text .title {
+            font-size: 0.9rem;
+            color: var(--accent-light);
+            font-weight: 600;
+            margin-top: 0.5rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
         }
-        
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
+
+        .header-text .tagline {
+            font-size: 1rem;
+            color: #a1a1aa;
+            margin-top: 0.75rem;
+            max-width: 480px;
+            line-height: 1.6;
         }
-        
+
+        .header-cta {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.6rem 1.4rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.88rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); }
+
+        .btn-outline {
+            display: inline-block;
+            background: transparent;
+            color: white;
+            padding: 0.6rem 1.4rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.88rem;
+            border: 2px solid #3f3f46;
+            transition: all 0.2s ease;
+        }
+
+        .btn-outline:hover { border-color: var(--accent-light); color: var(--accent-light); transform: translateY(-2px); }
+
+        /* Nav */
         nav {
-            background-color: #1e293b;
-            padding: 1rem;
+            background-color: var(--nav-bg);
+            padding: 0 2rem;
             position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            top: 0; z-index: 100;
+            border-bottom: 1px solid #27272a;
         }
-        
+
         nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 2rem;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        nav a:hover {
-            color: #60a5fa;
-        }
-
-        nav a.active {
-            color: #60a5fa;
-            border-bottom: 2px solid #60a5fa;
-            padding-bottom: 2px;
-        }
-        
-        .container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 2rem;
         }
-        
+
+        nav a {
+            color: #a1a1aa;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.88rem;
+            padding: 1rem 1.1rem;
+            display: block;
+            transition: color 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover { color: white; }
+        nav a.active { color: white; border-bottom-color: var(--accent); }
+
+        /* Container */
+        .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
+
+        /* Sections */
         section {
-            background: white;
-            margin: 2rem 0;
+            background: var(--card-bg);
+            margin: 1.5rem 0;
             padding: 2.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 16px;
+            border: 1px solid var(--border);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         section:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.07);
         }
-        
-        section p {
-            text-align: justify;
-        }
-        
+
+        section p { color: var(--text); }
+
         h2 {
-            color: #1e3a8a;
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: var(--text);
             margin-bottom: 1.5rem;
-            font-size: 2rem;
-            border-bottom: 3px solid #3b82f6;
-            padding-bottom: 0.5rem;
+            padding-left: 1rem;
+            border-left: 4px solid var(--accent);
+            letter-spacing: -0.02em;
         }
-        
+
         h3 {
-            color: #1e40af;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text);
             margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .education-item, .research-area {
-            margin-bottom: 1.5rem;
-            padding: 1rem;
-            border-radius: 6px;
-            transition: background-color 0.3s ease;
+            margin-bottom: 0.4rem;
         }
 
-        .education-item:hover, .research-area:hover {
-            background-color: #f1f5f9;
-        }
-        
-        .degree {
-            font-weight: bold;
-            color: #1e40af;
-        }
-        
-        .institution {
-            font-style: italic;
-            color: #64748b;
-        }
-        
-        .publications-link {
-            display: inline-block;
-            background-color: #3b82f6;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 1rem;
-            transition: background-color 0.3s;
-        }
-        
-        .publications-link:hover {
-            background-color: #1e40af;
-        }
-        
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background-color: #1e293b;
-            color: white;
-            margin-top: 3rem;
-        }
-        
-        /* Social Media Icons */
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .social-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: #1e3a8a;
-            color: white;
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-        }
-
-        .social-icon:hover {
-            transform: translateY(-4px);
-            background-color: #3b82f6;
-        }
-
-        .social-icon svg {
-            width: 24px;
-            height: 24px;
-            fill: currentColor;
-        }
-
-        /* Stats Section */
+        /* Stats */
         .stats-container {
             display: flex;
             justify-content: center;
             gap: 3rem;
             flex-wrap: wrap;
-            padding: 2rem 0;
+            padding: 2rem 0 1rem;
         }
 
-        .stat-item {
-            text-align: center;
-        }
+        .stat-item { text-align: center; }
 
         .stat-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #1e3a8a;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--accent);
             display: block;
+            letter-spacing: -0.03em;
         }
 
         .stat-label {
-            font-size: 0.9rem;
-            color: #64748b;
+            font-size: 0.75rem;
+            color: var(--text-muted);
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.1em;
+            font-weight: 600;
         }
 
-        body.dark-mode .stat-number {
-            color: #60a5fa;
+        /* Research */
+        .research-area {
+            margin-bottom: 1rem;
+            padding: 1.25rem;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            transition: all 0.2s ease;
         }
 
-        body.dark-mode .stat-label {
-            color: #94a3b8;
-        }
+        .research-area:hover { border-color: var(--accent); background-color: var(--accent-bg); }
+        .research-area p { color: var(--text-muted); font-size: 0.93rem; }
 
-        /* Education Timeline */
-        .timeline {
-            position: relative;
-            padding-left: 30px;
-        }
+        /* Timeline */
+        .timeline { position: relative; padding-left: 30px; }
 
         .timeline::before {
             content: '';
             position: absolute;
-            left: 8px;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: linear-gradient(to bottom, #3b82f6, #1e3a8a);
+            left: 8px; top: 0; bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent), transparent);
             border-radius: 2px;
         }
 
         .timeline-item {
             position: relative;
-            margin-bottom: 2rem;
-            padding: 1rem;
-            border-radius: 6px;
-            transition: background-color 0.3s ease;
+            margin-bottom: 1.25rem;
+            padding: 1.25rem;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            transition: all 0.2s ease;
         }
 
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -26px;
-            top: 1.2rem;
-            width: 14px;
-            height: 14px;
-            background-color: #3b82f6;
-            border: 3px solid white;
+            left: -26px; top: 1.4rem;
+            width: 12px; height: 12px;
+            background-color: var(--accent);
+            border: 2px solid var(--card-bg);
             border-radius: 50%;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            box-shadow: 0 0 0 3px rgba(99,102,241,0.2);
         }
 
-        .timeline-item:hover {
-            background-color: #f1f5f9;
+        .timeline-item:hover { border-color: var(--accent); background-color: var(--accent-bg); }
+
+        .degree { font-weight: 700; color: var(--text); font-size: 0.97rem; }
+        .institution { font-size: 0.88rem; color: var(--text-muted); margin-top: 0.2rem; }
+        .timeline-item > div:not(.degree):not(.institution) { font-size: 0.88rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+        /* Publications */
+        .pub-item {
+            padding: 1.25rem;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            margin-bottom: 1rem;
+            transition: all 0.2s ease;
         }
 
-        body.dark-mode .timeline-item:hover {
-            background-color: #334155;
+        .pub-item:hover { border-color: var(--accent); background-color: var(--accent-bg); }
+
+        .pub-title { font-weight: 700; color: var(--text); font-size: 0.93rem; line-height: 1.5; }
+
+        .pub-journal {
+            display: inline-block;
+            background: var(--accent-bg);
+            color: var(--accent);
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 0.2rem 0.7rem;
+            border-radius: 999px;
+            margin-top: 0.5rem;
+            border: 1px solid rgba(99,102,241,0.3);
         }
 
-        body.dark-mode .timeline-item::before {
-            border-color: #1e293b;
+        .pub-authors { font-size: 0.83rem; color: var(--text-muted); margin-top: 0.4rem; }
+
+        /* Teaching */
+        .teaching-item {
+            padding: 1.25rem;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            transition: all 0.2s ease;
         }
 
-        /* Blog Section */
+        .teaching-item:hover { border-color: var(--accent); background-color: var(--accent-bg); }
+
+        /* Blog */
         .blog-card {
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
             padding: 1.5rem;
             margin-bottom: 1.5rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.2s ease;
         }
 
         .blog-card:hover {
+            border-color: var(--accent);
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+            box-shadow: 0 8px 30px rgba(99,102,241,0.1);
         }
 
         .blog-meta {
-            font-size: 0.85rem;
-            color: #64748b;
+            font-size: 0.8rem;
+            color: var(--text-muted);
             margin-bottom: 0.75rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
         }
 
-        .blog-meta span {
-            margin-right: 1rem;
-        }
+        .blog-meta span::after { content: '·'; margin-left: 0.4rem; }
+        .blog-meta span:last-child::after { content: ''; }
 
         .blog-tag {
             display: inline-block;
-            background-color: #dbeafe;
-            color: #1e40af;
-            font-size: 0.75rem;
-            padding: 0.2rem 0.6rem;
+            background: var(--accent-bg);
+            color: var(--accent);
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 0.2rem 0.65rem;
             border-radius: 999px;
-            margin-right: 0.4rem;
+            margin-right: 0.3rem;
             margin-bottom: 0.5rem;
+            border: 1px solid rgba(99,102,241,0.3);
         }
 
-        .blog-excerpt {
-            color: #475569;
-            margin: 0.75rem 0 1rem;
-            font-size: 0.95rem;
-        }
+        .blog-excerpt { color: var(--text-muted); margin: 0.75rem 0 1rem; font-size: 0.92rem; line-height: 1.7; }
 
         .blog-read-more {
-            display: inline-block;
-            color: #3b82f6;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            color: var(--accent);
             font-weight: 600;
             text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s ease;
+            font-size: 0.87rem;
+            transition: gap 0.2s ease;
         }
 
-        .blog-read-more:hover {
-            color: #1e40af;
+        .blog-read-more:hover { gap: 0.6rem; }
+
+        /* Contact */
+        .contact-info { display: flex; flex-direction: column; gap: 0.75rem; }
+
+        .contact-item { display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.93rem; }
+
+        /* Social Icons */
+        .social-icons { display: flex; gap: 0.75rem; margin-top: 1.5rem; flex-wrap: wrap; }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px; height: 44px;
+            border-radius: 10px;
+            background-color: var(--accent-bg);
+            color: var(--accent);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(99,102,241,0.2);
         }
 
-        body.dark-mode .blog-card {
-            border-color: #334155;
+        .social-icon:hover { background-color: var(--accent); color: white; transform: translateY(-3px); }
+        .social-icon svg { width: 20px; height: 20px; fill: currentColor; }
+
+        /* Shared link button */
+        .publications-link {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 0.65rem 1.4rem;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 1rem;
+            font-weight: 600;
+            font-size: 0.88rem;
+            transition: all 0.2s ease;
         }
 
-        body.dark-mode .blog-tag {
-            background-color: #1e3a8a;
-            color: #93c5fd;
-        }
+        .publications-link:hover { background-color: var(--accent-hover); transform: translateY(-2px); }
 
-        body.dark-mode .blog-excerpt {
-            color: #94a3b8;
-        }
-
-        body.dark-mode .blog-meta {
-            color: #94a3b8;
-        }
-
-        /* Back to Top Button */
+        /* Back to Top */
         .back-to-top {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background-color: #1e3a8a;
+            bottom: 30px; right: 30px;
+            width: 44px; height: 44px;
+            background-color: var(--accent);
             color: white;
             border: none;
-            border-radius: 50%;
+            border-radius: 10px;
             cursor: pointer;
-            font-size: 1.5rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(99,102,241,0.4);
+            opacity: 0; visibility: hidden;
+            transition: all 0.3s ease;
             z-index: 1000;
         }
 
-        .back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        .back-to-top:hover { background-color: var(--accent-hover); transform: translateY(-3px); }
+
+        /* Fade-in */
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--primary);
+            color: #71717a;
+            margin-top: 1rem;
+            font-size: 0.85rem;
         }
 
-        .back-to-top:hover {
-            background-color: #3b82f6;
-            transform: translateY(-4px);
-        }
-
-        /* Scroll Fade-in Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
+        /* Responsive */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            .profile-photo {
-                width: 150px;
-                height: 150px;
-                transform: scale(1.05);
-            }
-
-            .profile-photo:hover {
-                transform: scale(1.1);
-            }
-            
-            nav ul {
-                gap: 1rem;
-            }
-            
-            section {
-                padding: 1.5rem;
-            }
-
-            .back-to-top {
-                bottom: 20px;
-                right: 20px;
-                width: 45px;
-                height: 45px;
-            }
-
-            .theme-toggle {
-                top: 70px;
-                right: 15px;
-                width: 40px;
-                height: 40px;
-            }
-
-            .stats-container {
-                gap: 1.5rem;
-            }
-
-            .stat-number {
-                font-size: 2rem;
-            }
-
-            .social-icons {
-                justify-content: center;
-            }
+            .header-content { flex-direction: column; text-align: center; gap: 1.5rem; }
+            .header-text h1 { font-size: 2rem; }
+            .header-cta { justify-content: center; }
+            .profile-photo { width: 130px; height: 130px; }
+            nav a { padding: 0.8rem 0.7rem; font-size: 0.82rem; }
+            section { padding: 1.5rem; }
+            .back-to-top { bottom: 20px; right: 20px; }
+            .theme-toggle { top: 70px; right: 15px; }
         }
     </style>
 </head>
 <body>
-    <!-- Reading Progress Bar -->
     <div class="progress-bar"></div>
-
-    <!-- Dark Mode Toggle -->
     <button class="theme-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙</button>
 
     <header>
         <div class="header-content">
             <img src="Profile.jpeg" alt="Jones Paintsil" class="profile-photo">
-            <div>
+            <div class="header-text">
                 <h1>Jones Paintsil</h1>
-                <p>Development Economist | PhD Candidate</p>
+                <p class="title">Development Economist &nbsp;·&nbsp; PhD Candidate</p>
+                <p class="tagline">Researching health, poverty, and climate in Sub-Saharan Africa. Consultant at the World Bank Group.</p>
+                <div class="header-cta">
+                    <a href="JonesPaintsil.pdf" class="btn-primary" download>Download CV</a>
+                    <a href="#contact" class="btn-outline">Get in Touch</a>
+                </div>
             </div>
         </div>
     </header>
-    
+
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
@@ -605,24 +537,24 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    
+
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
             <p>I am a Development Economist and fourth-year PhD candidate in Economics at Howard University, with a concentration in Development Economics. Currently, I work as a Consultant in the Enterprise Analysis Unit at the World Bank Group, where I contribute to survey design, data collection, and analysis for Enterprise Surveys.</p>
+            <br>
             <p>My research focuses on understanding the complex relationships between climate, health, and economic development in Sub-Saharan Africa. My dissertation explores "Health and Poverty: Evidence from Sub-Saharan Africa," examining how weather shocks and health outcomes intersect with poverty dynamics.</p>
+            <br>
             <p>Drawing on applied econometrics and data science, I use rigorous quantitative methods to address development challenges and inform evidence-based policy decisions.</p>
-            <a href="JonesPaintsil.pdf" class="publications-link" download>Download CV (PDF)</a>
 
-            <!-- Stats Section -->
             <div class="stats-container">
                 <div class="stat-item">
                     <span class="stat-number" data-target="6">0</span>
                     <span class="stat-label">Publications</span>
                 </div>
             </div>
-            <p style="text-align: center; font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">
-                <a href="https://scholar.google.com/citations?user=E6jcKroAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer" style="color: #3b82f6;">View all publications on Google Scholar</a>
+            <p style="text-align: center; font-size: 0.82rem; color: var(--text-muted); margin-top: 0.5rem;">
+                <a href="https://scholar.google.com/citations?user=E6jcKroAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">View all publications on Google Scholar</a>
             </p>
         </section>
 
@@ -635,17 +567,14 @@
                     <div>Dissertation: Health and Poverty: Evidence from Sub-Saharan Africa</div>
                     <div>Sasakawa Fellowship (2025-2027)</div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="degree">MA in Economics (2025)</div>
                     <div class="institution">Howard University, Washington, D.C.</div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="degree">MS in Economics (2019)</div>
                     <div class="institution">University of Cape Coast, Ghana</div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="degree">BA in Economics and Mathematics (2016)</div>
                     <div class="institution">University of Cape Coast, Ghana</div>
@@ -661,22 +590,18 @@
                 <h3>Health Economics</h3>
                 <p>I investigate the relationships between health systems, policy interventions, and population health outcomes. My work has examined how expanding health insurance coverage can reduce childhood malnutrition, and how income levels differentially affect health outcomes across African contexts. My current dissertation explores the intersection of weather shocks, health, and poverty dynamics.</p>
             </div>
-
             <div class="research-area">
-                <h3>Gender & Women's Empowerment</h3>
+                <h3>Gender &amp; Women's Empowerment</h3>
                 <p>A significant portion of my research addresses gender disparities in Sub-Saharan Africa. I have studied how women's empowerment indicators influence reproductive health decisions, including contraceptive use, and examined the social and cultural factors underlying gender-based violence acceptance across 30 African countries.</p>
             </div>
-
             <div class="research-area">
-                <h3>Child Welfare & Development</h3>
+                <h3>Child Welfare &amp; Development</h3>
                 <p>My research on child welfare investigates the social determinants affecting children's health and safety. This includes work on reducing childhood malnutrition through maternal health interventions and examining the factors contributing to child abuse across multiple Sub-Saharan African countries.</p>
             </div>
-
             <div class="research-area">
                 <h3>Financial Development</h3>
                 <p>I have contributed to research on financial sector development, including examining the implications of financial liberalization on private savings behavior in Sub-Saharan African economies.</p>
             </div>
-
             <div class="research-area">
                 <h3>Methodology</h3>
                 <p>I employ advanced econometric techniques and work with large-scale survey data, including Demographic and Health Surveys (DHS) and Enterprise Surveys, to produce rigorous, policy-relevant research findings.</p>
@@ -686,66 +611,66 @@
                 <a href="https://scholar.google.com/citations?user=E6jcKroAAAAJ&hl=en&oi=ao" class="publications-link" target="_blank" rel="noopener noreferrer">View Full Research Portfolio on Google Scholar</a>
             </p>
         </section>
-        
+
         <section id="publications">
             <h2>Publications</h2>
-            
-            <h3>Selected Publications</h3>
-            
-            <div class="education-item">
-                <strong>Reducing children's malnutrition by increasing mothers' health insurance coverage</strong><br>
-                <em>Economic Modelling</em>, 117, 106049 (with Kofinti, R.E., Koomson, I.K., Amayaw, E.E.)
+            <h3 style="margin-top: 0; margin-bottom: 1rem;">Selected Publications</h3>
+
+            <div class="pub-item">
+                <div class="pub-title">Reducing children's malnutrition by increasing mothers' health insurance coverage</div>
+                <span class="pub-journal">Economic Modelling, 117, 106049</span>
+                <div class="pub-authors">with Kofinti, R.E., Koomson, I.K., Amayaw, E.E.</div>
             </div>
-            
-            <div class="education-item">
-                <strong>Financial Liberalization and its Implications for Private Savings in Sub-Saharan Africa</strong><br>
-                <em>WIDER Working Paper</em> (with Asiedu, E., Asiseh, F., Mannah-Blankson, T.)
+            <div class="pub-item">
+                <div class="pub-title">Financial Liberalization and its Implications for Private Savings in Sub-Saharan Africa</div>
+                <span class="pub-journal">WIDER Working Paper</span>
+                <div class="pub-authors">with Asiedu, E., Asiseh, F., Mannah-Blankson, T.</div>
             </div>
-            
-            <div class="education-item">
-                <strong>Women's empowerment indicators and short- and long-acting contraceptive method use</strong><br>
-                <em>Reproductive Health</em> 19, 222 (2022) (with Ameyaw, E., et al.)
+            <div class="pub-item">
+                <div class="pub-title">Women's empowerment indicators and short- and long-acting contraceptive method use</div>
+                <span class="pub-journal">Reproductive Health, 19, 222 (2022)</span>
+                <div class="pub-authors">with Ameyaw, E., et al.</div>
             </div>
-            
-            <div class="education-item">
-                <strong>Gender differences in the acceptance of wife-beating: evidence from 30 countries in Sub-Saharan Africa</strong><br>
-                <em>BMC Women's Health</em> 23, 451 (2023) (with Ameyaw, E., et al.)
+            <div class="pub-item">
+                <div class="pub-title">Gender differences in the acceptance of wife-beating: evidence from 30 countries in Sub-Saharan Africa</div>
+                <span class="pub-journal">BMC Women's Health, 23, 451 (2023)</span>
+                <div class="pub-authors">with Ameyaw, E., et al.</div>
             </div>
-            
-            <div class="education-item">
-                <strong>Social determinants of child abuse: Evidence from seven countries in sub-Saharan Africa</strong><br>
-                <em>PLoS ONE</em>, 19(7), e0305778 (2024) (with Ameyaw, E., et al.)
+            <div class="pub-item">
+                <div class="pub-title">Social determinants of child abuse: Evidence from seven countries in sub-Saharan Africa</div>
+                <span class="pub-journal">PLoS ONE, 19(7), e0305778 (2024)</span>
+                <div class="pub-authors">with Ameyaw, E., et al.</div>
             </div>
-            
-            <div class="education-item">
-                <strong>On the Impact of Income per Capita on Health Outcomes: Is Africa Different</strong><br>
-                <em>International Journal of Innovation and Economic Development</em>, Volume 8, Issue 5 (2022) (with Asiedu, E., et al.)
+            <div class="pub-item">
+                <div class="pub-title">On the Impact of Income per Capita on Health Outcomes: Is Africa Different</div>
+                <span class="pub-journal">International Journal of Innovation and Economic Development, Vol. 8, Issue 5 (2022)</span>
+                <div class="pub-authors">with Asiedu, E., et al.</div>
             </div>
-            
-            <p style="margin-top: 2rem;">For a complete list of my publications, citations, and research metrics, please visit my Google Scholar profile:</p>
+
+            <p style="margin-top: 1.5rem;">For a complete list of publications, citations, and research metrics, visit my Google Scholar profile:</p>
             <a href="https://scholar.google.com/citations?user=E6jcKroAAAAJ&hl=en&oi=ao" class="publications-link" target="_blank" rel="noopener noreferrer">View All Publications on Google Scholar</a>
         </section>
-        
+
         <section id="teaching">
             <h2>Teaching</h2>
             <p style="margin-bottom: 1.5rem;">I am committed to making quantitative methods accessible and relevant to students interested in business and economic analysis.</p>
-
-            <div class="education-item">
+            <div class="teaching-item">
                 <div class="degree">ECON 180-05: Statistics for Business and Economics</div>
                 <div class="institution">Howard University, Department of Economics</div>
-                <div style="margin-top: 0.4rem;">Spring 2026 &nbsp;|&nbsp; Instructor</div>
-                <p style="margin-top: 0.75rem;">An applied introduction to statistical reasoning for business and economic decision-making. Topics include descriptive statistics, probability, sampling distributions, hypothesis testing, regression analysis, and time series. Primary text: Doane, <em>Applied Statistics for Business and Economics</em> (2024).</p>
+                <div style="margin-top: 0.4rem; font-size: 0.88rem; color: var(--text-muted);">Spring 2026 &nbsp;|&nbsp; Instructor</div>
+                <p style="margin-top: 0.75rem; color: var(--text-muted); font-size: 0.92rem;">An applied introduction to statistical reasoning for business and economic decision-making. Topics include descriptive statistics, probability, sampling distributions, hypothesis testing, regression analysis, and time series. Primary text: Doane, <em>Applied Statistics for Business and Economics</em> (2024).</p>
             </div>
         </section>
 
         <section id="blog">
             <h2>Blog</h2>
             <p style="margin-bottom: 1.5rem;">Policy briefs, data insights, and commentary on development economics in Sub-Saharan Africa.</p>
-
             <div class="blog-card">
-                <span class="blog-tag">Private Sector</span>
-                <span class="blog-tag">Liberia</span>
-                <span class="blog-tag">Enterprise Surveys</span>
+                <div>
+                    <span class="blog-tag">Private Sector</span>
+                    <span class="blog-tag">Liberia</span>
+                    <span class="blog-tag">Enterprise Surveys</span>
+                </div>
                 <h3 style="margin-top: 0.5rem;">Liberia's Private Sector in Focus: What the Data Reveal</h3>
                 <div class="blog-meta">
                     <span>May 12, 2026</span>
@@ -761,17 +686,15 @@
             <h2>Contact</h2>
             <div class="contact-info">
                 <div class="contact-item">
-                    <strong>Current Position:</strong> Consultant, Enterprise Analysis Unit, The World Bank Group
+                    <strong>Current Position:</strong>&nbsp; Consultant, Enterprise Analysis Unit, The World Bank Group
                 </div>
                 <div class="contact-item">
-                    <strong>Institution:</strong> Howard University, Department of Economics
+                    <strong>Institution:</strong>&nbsp; Howard University, Department of Economics
                 </div>
                 <div class="contact-item">
-                    <strong>Email:</strong> arkohjones@gmail.com
+                    <strong>Email:</strong>&nbsp; arkohjones@gmail.com
                 </div>
             </div>
-
-            <!-- Social Media Icons -->
             <div class="social-icons">
                 <a href="mailto:arkohjones@gmail.com" class="social-icon" aria-label="Email" title="Email">
                     <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
@@ -788,8 +711,7 @@
             </div>
         </section>
     </div>
-    
-    <!-- Back to Top Button -->
+
     <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to top">↑</button>
 
     <footer>
@@ -797,24 +719,19 @@
     </footer>
 
     <script>
-        // Active navigation highlighting on scroll
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('nav a');
 
         function highlightNav() {
             const scrollPos = window.scrollY + 100;
-
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.offsetHeight;
                 const sectionId = section.getAttribute('id');
-
                 if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
                     navLinks.forEach(link => {
                         link.classList.remove('active');
-                        if (link.getAttribute('href') === '#' + sectionId) {
-                            link.classList.add('active');
-                        }
+                        if (link.getAttribute('href') === '#' + sectionId) link.classList.add('active');
                     });
                 }
             });
@@ -823,30 +740,19 @@
         window.addEventListener('scroll', highlightNav);
         window.addEventListener('load', highlightNav);
 
-        // Back to Top Button visibility
         const backToTopBtn = document.querySelector('.back-to-top');
-
         window.addEventListener('scroll', function() {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.add('visible');
-            } else {
-                backToTopBtn.classList.remove('visible');
-            }
+            backToTopBtn.classList.toggle('visible', window.scrollY > 300);
         });
 
-        // Reading Progress Bar
         const progressBar = document.querySelector('.progress-bar');
-
         window.addEventListener('scroll', function() {
             const scrollTop = window.scrollY;
             const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrollPercent = (scrollTop / docHeight) * 100;
-            progressBar.style.width = scrollPercent + '%';
+            progressBar.style.width = (scrollTop / docHeight * 100) + '%';
         });
 
-        // Dark Mode Toggle
         const themeToggle = document.querySelector('.theme-toggle');
-
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
             const isDark = document.body.classList.contains('dark-mode');
@@ -854,73 +760,41 @@
             localStorage.setItem('darkMode', isDark);
         }
 
-        // Check for saved dark mode preference
         if (localStorage.getItem('darkMode') === 'true') {
             document.body.classList.add('dark-mode');
             themeToggle.textContent = '☀️';
         }
 
-        // Animated Statistics Counter
         const statNumbers = document.querySelectorAll('.stat-number');
         let statsAnimated = false;
 
         function animateStats() {
             if (statsAnimated) return;
-
             statNumbers.forEach(stat => {
                 const target = parseInt(stat.getAttribute('data-target'));
-                const duration = 2000;
-                const increment = target / (duration / 16);
+                const increment = target / (2000 / 16);
                 let current = 0;
-
                 const updateCount = () => {
                     current += increment;
-                    if (current < target) {
-                        stat.textContent = Math.ceil(current);
-                        requestAnimationFrame(updateCount);
-                    } else {
-                        stat.textContent = target + '+';
-                    }
+                    if (current < target) { stat.textContent = Math.ceil(current); requestAnimationFrame(updateCount); }
+                    else { stat.textContent = target + '+'; }
                 };
-
                 updateCount();
             });
-
             statsAnimated = true;
         }
 
-        // Trigger stats animation when stats section is visible
         const statsContainer = document.querySelector('.stats-container');
-
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateStats();
-                }
-            });
+        const statsObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => { if (entry.isIntersecting) animateStats(); });
         }, { threshold: 0.5 });
+        if (statsContainer) statsObserver.observe(statsContainer);
 
-        if (statsContainer) {
-            statsObserver.observe(statsContainer);
-        }
-
-        // Scroll Fade-in Animations using Intersection Observer
         const fadeElements = document.querySelectorAll('section');
-
-        // Add fade-in class to all sections
         fadeElements.forEach(el => el.classList.add('fade-in'));
-
-        const fadeObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
-
+        const fadeObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
         fadeElements.forEach(el => fadeObserver.observe(el));
     </script>
 </body>
