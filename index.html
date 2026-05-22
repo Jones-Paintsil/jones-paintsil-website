@@ -95,54 +95,64 @@
 
         /* Header */
         header {
-            background: var(--primary);
-            color: white;
-            padding: 5rem 2rem 4rem;
+            background: var(--card-bg);
+            color: var(--text);
+            padding: 3rem 2rem 2.5rem;
+            border-bottom: 1px solid var(--border);
         }
 
         .header-content {
             max-width: 900px;
             margin: 0 auto;
+        }
+
+        .header-body {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
+            justify-content: space-between;
             gap: 3rem;
         }
 
+        .header-divider {
+            border: none;
+            border-top: 3px solid var(--border);
+            width: 80px;
+            margin: 0.75rem 0 1.5rem;
+        }
+
         .profile-photo {
-            width: 160px; height: 160px;
-            border-radius: 16px;
+            width: 180px; height: 180px;
+            border-radius: 50%;
             object-fit: cover;
             object-position: center 15%;
             flex-shrink: 0;
-            border: 3px solid var(--accent);
-            box-shadow: 0 0 0 6px rgba(59,130,246,0.2);
+            border: 3px solid var(--border);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
             transition: transform 0.3s ease;
         }
 
         .profile-photo:hover { transform: scale(1.03); }
 
-        .header-text h1 {
+        .header-top h1 {
             font-size: 2.8rem;
             font-weight: 800;
             letter-spacing: -0.02em;
             line-height: 1.1;
+            color: var(--text);
         }
 
-        .header-text .title {
-            font-size: 0.9rem;
-            color: var(--accent-light);
-            font-weight: 600;
-            margin-top: 0.5rem;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
+        .header-top .title {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-top: 0.4rem;
         }
 
         .header-text .tagline {
             font-size: 1rem;
-            color: #a1a1aa;
-            margin-top: 0.75rem;
-            max-width: 480px;
-            line-height: 1.6;
+            color: var(--text);
+            margin-top: 0;
+            line-height: 1.7;
         }
 
         .header-cta {
@@ -169,17 +179,17 @@
         .btn-outline {
             display: inline-block;
             background: transparent;
-            color: white;
+            color: var(--text);
             padding: 0.6rem 1.4rem;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
             font-size: 0.88rem;
-            border: 2px solid #3f3f46;
+            border: 2px solid var(--border);
             transition: all 0.2s ease;
         }
 
-        .btn-outline:hover { border-color: var(--accent-light); color: var(--accent-light); transform: translateY(-2px); }
+        .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
 
         /* Nav */
         nav {
@@ -496,10 +506,12 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .header-content { flex-direction: column; text-align: center; gap: 1.5rem; }
-            .header-text h1 { font-size: 2rem; }
+            .header-top { text-align: center; }
+            .header-divider { margin: 0.75rem auto 1.5rem; }
+            .header-body { flex-direction: column; align-items: center; text-align: center; }
+            .header-top h1 { font-size: 2rem; }
             .header-cta { justify-content: center; }
-            .profile-photo { width: 130px; height: 130px; }
+            .profile-photo { width: 140px; height: 140px; order: -1; }
             nav a { padding: 0.8rem 0.7rem; font-size: 0.82rem; }
             section { padding: 1.5rem; }
             .back-to-top { bottom: 20px; right: 20px; }
@@ -513,15 +525,20 @@
 
     <header>
         <div class="header-content">
-            <img src="Profile.jpeg" alt="Jones Paintsil" class="profile-photo">
-            <div class="header-text">
+            <div class="header-top">
                 <h1>Jones Paintsil</h1>
                 <p class="title">Development Economist &nbsp;·&nbsp; PhD Candidate</p>
-                <p class="tagline">Researching health, poverty, and climate in Sub-Saharan Africa. Consultant at the World Bank Group.</p>
-                <div class="header-cta">
-                    <a href="JonesPaintsil.pdf" class="btn-primary" download>Download CV</a>
-                    <a href="#contact" class="btn-outline">Get in Touch</a>
+                <hr class="header-divider">
+            </div>
+            <div class="header-body">
+                <div class="header-text">
+                    <p class="tagline">Researching health, poverty, and climate in Sub-Saharan Africa. Consultant at the World Bank Group.</p>
+                    <div class="header-cta">
+                        <a href="JonesPaintsil.pdf" class="btn-primary" download>Download CV</a>
+                        <a href="#contact" class="btn-outline">Get in Touch</a>
+                    </div>
                 </div>
+                <img src="Profile.jpeg" alt="Jones Paintsil" class="profile-photo">
             </div>
         </div>
     </header>
