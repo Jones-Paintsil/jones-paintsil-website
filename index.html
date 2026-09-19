@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jones Paintsil - Development Economist</title>
 
-    <meta name="description" content="Jones Paintsil is a PhD candidate in Economics at Howard University, with a concentration in Development Economics. Currently a Consultant at the World Bank Group.">
+    <meta name="description" content="Jones Paintsil is a PhD candidate in Economics at Howard University on the 2026-2027 economics job market. Job market paper on firm backup-power choices in developing economies. Consultant at the World Bank Group.">
     <meta name="keywords" content="Jones Paintsil, Development Economics, Howard University, World Bank, PhD Economist, Sub-Saharan Africa, Health Economics, Climate Economics">
     <meta name="author" content="Jones Paintsil">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
     <meta property="og:title" content="Jones Paintsil - Development Economist">
-    <meta property="og:description" content="PhD candidate in Economics at Howard University. Consultant at the World Bank Group. Research focus on health, climate, and poverty in Sub-Saharan Africa.">
+    <meta property="og:description" content="PhD candidate in Economics at Howard University on the 2026-2027 job market. Consultant at the World Bank Group. Research on energy, environment, development, and firm behavior.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="Profile.jpeg">
 
@@ -23,7 +23,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -50,18 +50,6 @@
             color: var(--text);
             background-color: var(--bg);
         }
-
-        /* Progress Bar */
-        .progress-bar {
-            position: fixed;
-            top: 0; left: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--accent), var(--accent-light));
-            width: 0%;
-            z-index: 1001;
-            transition: width 0.1s ease;
-        }
-
 
         /* Header */
         header {
@@ -123,6 +111,67 @@
             color: var(--text);
             margin-top: 0;
             line-height: 1.7;
+        }
+
+        .jm-status {
+            display: inline-block;
+            margin-top: 1rem;
+            background: var(--accent-bg);
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 0.35rem 0.9rem;
+            border-radius: 999px;
+            border: 1px solid rgba(59,130,246,0.3);
+        }
+
+        .jm-paper {
+            max-width: 720px;
+            margin: 0 auto;
+            font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+            background: #fdfdfc;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2.25rem 2.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+        }
+        .jm-paper .jm-title {
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            line-height: 1.4;
+            color: var(--text);
+            margin-bottom: 1.25rem;
+        }
+        .jm-paper .jm-abstract-label {
+            text-align: center;
+            font-variant: small-caps;
+            letter-spacing: 0.12em;
+            font-weight: 600;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+        .jm-abstract {
+            text-align: justify;
+            hyphens: auto;
+            color: var(--text);
+            font-size: 0.92rem;
+            line-height: 1.55;
+            margin: 0 auto;
+        }
+        .jm-meta {
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 1.25rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 768px) {
+            .jm-paper { padding: 1.5rem 1.25rem; }
         }
 
         .header-cta {
@@ -203,12 +252,6 @@
             padding: 2.5rem;
             border-radius: 16px;
             border: 1px solid var(--border);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        section:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.07);
         }
 
         section p { color: var(--text); }
@@ -489,11 +532,10 @@
     </style>
 </head>
 <body>
-    <div class="progress-bar"></div>
-
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
+            <li><a href="#jobmarket">Job Market</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#research">Research</a></li>
             <li><a href="#publications">Publications</a></li>
@@ -507,14 +549,16 @@
         <div class="header-content">
             <div class="header-top">
                 <h1>Jones Paintsil</h1>
-                <p class="title">Development Economist &nbsp;·&nbsp; PhD Candidate</p>
+                <p class="title">Applied Microeconomics, Development Economics &nbsp;·&nbsp; PhD Candidate</p>
                 <hr class="header-divider">
             </div>
             <div class="header-body">
                 <div class="header-text">
-                    <p class="tagline">Researching health, poverty, and climate in Sub-Saharan Africa. Consultant at the World Bank Group.</p>
+                    <p class="tagline">Applied microeconomics of energy, the environment, development, and firm behavior. Consultant at the World Bank Group.</p>
+                    <p class="jm-status">On the 2026-2027 economics job market</p>
                     <div class="header-cta">
-                        <a href="JonesPaintsil.pdf" class="btn-primary" download>Download CV</a>
+                        <a href="#jobmarket" class="btn-primary">Job Market Paper</a>
+                        <a href="JonesPaintsil.pdf" class="btn-outline" download>Download CV</a>
                         <a href="#contact" class="btn-outline">Get in Touch</a>
                     </div>
                 </div>
@@ -526,15 +570,15 @@
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>I am a Development Economist and fourth-year PhD candidate in Economics at Howard University, with a concentration in Development Economics. Currently, I work as a Consultant in the Enterprise Analysis Unit at the World Bank Group, where I contribute to survey design, data collection, and analysis for Enterprise Surveys.</p>
+            <p>I am a PhD candidate in Economics at Howard University and a Consultant in the Enterprise Analysis Unit at the World Bank Group, where I work with World Bank Enterprise Survey firm microdata. I am on the 2026-2027 economics job market.</p>
             <br>
-            <p>My research focuses on understanding the complex relationships between climate, health, and economic development in Sub-Saharan Africa. My dissertation explores "Health and Poverty: Evidence from Sub-Saharan Africa," examining how weather shocks and health outcomes intersect with poverty dynamics.</p>
+            <p>My research is in applied microeconomics and development economics, spanning energy and the environment, firm behavior, and health. My dissertation consists of three empirical chapters. In my job market paper, I study how firms in developing economies choose backup power when the electricity grid is unreliable, and show that upfront capital and credit access, rather than outage exposure, govern the move to on-site solar.</p>
             <br>
-            <p>Drawing on applied econometrics and data science, I use rigorous quantitative methods to address development challenges and inform evidence-based policy decisions.</p>
+            <p>I use rigorous applied-microeconometric methods with large-scale survey and census microdata to produce policy-relevant evidence.</p>
 
             <div class="stats-container">
                 <div class="stat-item">
-                    <span class="stat-number" data-target="6">0</span>
+                    <span class="stat-number">6+</span>
                     <span class="stat-label">Publications</span>
                 </div>
             </div>
@@ -543,11 +587,21 @@
             </p>
         </section>
 
+        <section id="jobmarket">
+            <h2>Job Market Paper</h2>
+            <div class="jm-paper">
+                <div class="jm-title">Outage Duration, Capital, and the Firm Backup-Power Choice in Developing Countries</div>
+                <div class="jm-abstract-label">Abstract</div>
+                <p class="jm-abstract">Unreliable electricity forces firms in developing economies to secure their own power, a need historically met by diesel generators. Though on-site solar now costs less than diesel over its lifetime, diesel still dominates. This paper investigates firms' backup-power choices using the most recent rounds of the World Bank Enterprise Surveys, covering 36 developing economies (11,367 firms) across Sub-Saharan Africa (18), Latin America and the Caribbean (6), East Asia and the Pacific (5), South Asia (3), the Middle East and North Africa (2), and Europe and Central Asia (2), with 17 high-income economies (9,435 firms) held out as a benchmark. The analysis separates two mechanisms. The first is dispatchability. A generator can switch on instantly when the grid fails, whereas solar without storage is intermittent; outage exposure should therefore track diesel rather than solar adoption. The second is capital. Solar's large upfront cost implies adoption tracks firm capability and finance rather than outage exposure. Four findings emerge. First, outage exposure is associated with a higher probability of owning a generator, more strongly associated with outage duration than frequency. Second, the link between outage exposure and solar adoption is statistically indistinguishable from zero. Third, as outages lengthen, firms without backup move to diesel, while firms that already have solar add a generator. Fourth, solar adoption tracks firm capability, through firm size, exporting, and digital presence, a pattern that also holds in the high-income benchmark where outages are absent. Solar adopters are less finance-constrained, though holding bank credit does not predict adoption once capability is controlled. Lowering solar's upfront cost would raise clean self-generation but would not by itself shift firms away from generators for reliability, which requires a dispatchable clean option such as solar paired with storage.</p>
+                <div class="jm-meta"><strong>JEL:</strong> Q42, D22, O13, L94, Q56</div>
+            </div>
+        </section>
+
         <section id="education">
             <h2>Education</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="degree">PhD in Economics (Expected 2027)</div>
+                    <div class="degree">PhD in Economics (Expected 2026-2027)</div>
                     <div class="institution">Howard University, Washington, D.C.</div>
                     <div>Dissertation: Health and Poverty: Evidence from Sub-Saharan Africa</div>
                     <div>Sasakawa Fellowship (2025-2027)</div>
@@ -729,38 +783,6 @@
         window.addEventListener('scroll', function() {
             backToTopBtn.classList.toggle('visible', window.scrollY > 300);
         });
-
-        const progressBar = document.querySelector('.progress-bar');
-        window.addEventListener('scroll', function() {
-            const scrollTop = window.scrollY;
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            progressBar.style.width = (scrollTop / docHeight * 100) + '%';
-        });
-
-        const statNumbers = document.querySelectorAll('.stat-number');
-        let statsAnimated = false;
-
-        function animateStats() {
-            if (statsAnimated) return;
-            statNumbers.forEach(stat => {
-                const target = parseInt(stat.getAttribute('data-target'));
-                const increment = target / (2000 / 16);
-                let current = 0;
-                const updateCount = () => {
-                    current += increment;
-                    if (current < target) { stat.textContent = Math.ceil(current); requestAnimationFrame(updateCount); }
-                    else { stat.textContent = target + '+'; }
-                };
-                updateCount();
-            });
-            statsAnimated = true;
-        }
-
-        const statsContainer = document.querySelector('.stats-container');
-        const statsObserver = new IntersectionObserver(entries => {
-            entries.forEach(entry => { if (entry.isIntersecting) animateStats(); });
-        }, { threshold: 0.5 });
-        if (statsContainer) statsObserver.observe(statsContainer);
 
         const fadeElements = document.querySelectorAll('section');
         fadeElements.forEach(el => el.classList.add('fade-in'));
